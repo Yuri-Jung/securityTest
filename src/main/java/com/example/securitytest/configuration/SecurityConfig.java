@@ -60,7 +60,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.formLogin();
 //        logout() : 로그아웃 기능 활성화, 기본적으로 로그아웃 페이지는 post방식으로만 동작한다.
 //        로그아웃 페이지 사용시 사용할 수 있는 추가 옵션
-//        logoutUrl(url) : 로그아웃 처리
+//        logoutUrl(url) : 로그아웃 처리 페이지 지정
+//        logoutSuccessUrl(url) : 로그아웃 성공 시 이동할 페이지 지정
+//        deleteCookies('JSESSIONID','remember-me') : 로그아웃 시 쿠키 삭제
+//        addLogoutHandler() : 로그 아웃시 동작할 내용 설정
+//        logoutSuccessHandler() : 로그아웃 성공 시 동작할 내용 설정
         http.logout();
         
     }

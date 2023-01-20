@@ -69,10 +69,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         
     }
 
-    @Override
-//    AuthenticationManagerBuilder : 인증정보 만들어줌
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().withUser("user1").password(passwordEncoder().encode("1111")).roles("USER");
-        auth.inMemoryAuthentication().withUser("admin").password(passwordEncoder().encode("1111")).roles("ADMIN");
-    }
+//    @Override
+////    AuthenticationManagerBuilder : 인증정보 만들어줌
+////    이거 대신 데이터베이스 연결해서 사용할 거다.(20230120)
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.inMemoryAuthentication().withUser("user1").password(passwordEncoder().encode("1111")).roles("USER");
+//        auth.inMemoryAuthentication().withUser("admin").password(passwordEncoder().encode("1111")).roles("ADMIN");
+//    }
 }
